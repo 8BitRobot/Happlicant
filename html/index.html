@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Happlicant</title>
+    <meta property="og:title" content="Happlicant">
+    <meta property="og:description" content="An essay space for the happy applicant.">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.happlicant.org" />
+    <meta property="og:image" content="img/og_img.png" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo-title">
+                <img src="/img/logo.png">
+                <p>Happlicant</p>
+            </div>
+            <div id="nav-links">
+                <a href="/html/index.html">Home</a>
+                <a href="/html/about.html">About Us</a>
+                <a href="/html/request.html">Request a School</a>
+            </div>
+        </nav>
+    </header>
+    <div id="main">
+        <h1>Every essay starts with a <span>single word</span>.</h1>
+        <div class="searchbar">
+            <input type="text" placeholder="Search for a college...">
+        </div>
+        <div id="schools">
+            <div v-for="(school, index) in schools" :key="index" class="school"><img :src="school.img"></div>
+        </div>
+    </div>
+</body>
+<script>
+    var main = new Vue({
+        el: "#main",
+        data: {
+            schools: [{
+                name: "University of Pennsylvania",
+                img: "/img/upenn.png",
+                color: "#002992"
+            }, {
+                name: "Carnegie Mellon University",
+                img: "/img/cmu.png",
+                color: "#CC002B"
+            }, {
+                name: "Stanford University",
+                img: "/img/stanny.png",
+                color: "#A8003B"
+            }, {
+                name: "Cornell University",
+                img: "/img/cornell.png",
+                color: "#B31B1B"
+            }, {
+                name: "Princeton University",
+                img: "/img/princeton.png",
+                color: "#FF671F"
+            }, {
+                name: "Dartmouth University",
+                img: "/img/dartmouth.png",
+                color: "#00693E"
+            }, {
+                name: "Harvard University",
+                img: "/img/harvard.png",
+                color: "#A51C30"
+            }, {
+                name: "Massachusetts Institute of Technology",
+                img: "/img/mit.png",
+                color: "#A31F34"
+            }, {
+                name: "Duke University",
+                img: "/img/duke.png",
+                color: "#012169"
+            }, {
+                name: "Brown University",
+                img: "/img/brown.png",
+                color: "#E4002B"
+            }]
+        }
+    })
+</script>
+
+</html>

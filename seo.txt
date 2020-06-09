@@ -1,0 +1,4 @@
+<meta property="og:title" content="Happlicant">
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.happlicant.org" />
+<meta property="og:image" content="img/og_img.png" />
